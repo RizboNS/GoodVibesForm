@@ -3,9 +3,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Good Vibes Form</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    
+    <h1>Good Vibes Form</h1>
+    <div>
+        <p>Tell us something positive that happened to you today.</p>
+        <form id="surveyForm" action="">
+            <!-- row 1 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="name" id="nameLabel">Name</label>
+                </div>
+                <div class="fields">
+                    <input type="text" id="name" class="inputFields" placeholder="Enter your name" required>
+                </div>
+            </div>
+            <!-- row 2 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="email" id="emailLabel">Email</label>
+                </div>
+                <div class="fields">
+                    <input tpye="email" id="email" class="inputFields" placeholder="Enter your email address" required>
+                </div>
+            </div>
+            <!-- row 3 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="number" id="numberLabel">On a scale of 1-10, how good was it?</label>
+                </div>
+                <div class="fields">
+                    <input type="number" id="number" class="inputFields" placeholder="Enter a number between 1 and 10" min="1" max="10">
+                </div>
+            </div>
+            <!-- row 4 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="dropdown" id="dropdownLabel">Where did it happen?</label>
+                </div>
+                <div class="fields">
+                    <select name="Location of positive event" id="dropdown" class="dropdown">
+                        <option value="home">At home</option>
+                        <option value="comute">On my comute</option>
+                        <option value="work">At work</option>
+                        <option value="outside">On the street</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <!-- row 5 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="timeOfDay">At what time of day did it happen?</label>
+                </div>
+                <div class="fields">
+                    <ul id="timeOfDay" style="list-style: none;">
+                        <li class="radio">
+                            <label>Morning
+                                <input name="timeRadio" type="radio" value="1" user-selection>
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Afternoon
+                                <input name="timeRadio" type="radio" value="2" user-selection>
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Evening
+                                <input name="timeRadio" type="radio" value="3" user-selection>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- row 6 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="feelings">
+                        What emotions did you experience?<br>
+                        (Select all that apply)
+                    </label>
+                </div>
+                <div class="fields">
+                    <ul id="feelings" style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                <input name="feelingCheck" value="1" type="checkbox" class="userSelection">
+                                Excited
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelingCheck" value="2" type="checkbox" class="userSelection">
+                                Humbled
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelingCheck" value="3" type="checkbox" class="userSelection">
+                                Elated
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelingCheck" value="4" type="checkbox" class="userSelection">
+                                Loved
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelingCheck" value="5" type="checkbox" class="userSelection">
+                                Enthusiastic
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- row 7 -->
+            <div class="formRows">
+                <div class="labels">
+                    <label for="eventDetails">
+                        Please describe your positive experience.
+                    </label>
+                </div>
+                <div class="fields">
+                    <textarea id="eventDetails" class="inputFields" 
+                    style="height: 50px;resize: vertical;" 
+                    name="eventDetails" cols="1" rows="1"
+                    placeholder="Enter your experience here...">
+                </textarea>
+                </div>
+            </div>
+            <button class="button" id="submit" type="submit">submit</button>
+        </form>
+    </div>
 </body>
 </html>
